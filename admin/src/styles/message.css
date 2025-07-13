@@ -1,0 +1,145 @@
+/* Main Section */
+.messages-section {
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(145deg, #eef4ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the box vertically */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Box Container */
+.messages-box {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Title */
+.dashboard-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1f2a40;
+  margin-bottom: 0.5rem;
+}
+
+/* Subtitle */
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: #5f6a7d;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* Message List */
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Message Card */
+.message-card {
+  background: #f8faff;
+  border: 1px solid #dbe8f9;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(60, 72, 88, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.message-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Header inside each card */
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Sender name */
+.message-sender {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+/* Role Badges */
+.message-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.message-role.user {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+.message-role.host {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+/* Message content */
+.message-content {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* Timestamp */
+.message-time {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .messages-section {
+    align-items: flex-start; /* Back to top alignment for mobile scroll UX */
+  }
+
+  .messages-box {
+    padding: 1.5rem;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .dashboard-subtitle {
+    font-size: 1rem;
+  }
+
+  .message-sender {
+    font-size: 1rem;
+  }
+
+  .message-card {
+    padding: 1.2rem;
+  }
+
+  .message-role {
+    font-size: 0.8rem;
+  }
+
+  .message-time {
+    font-size: 0.8rem;
+  }
+}

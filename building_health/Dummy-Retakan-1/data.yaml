@@ -1,0 +1,13 @@
+train: /Users/pragunisanotra/Desktop/Prediction_Model/building_health/Dummy-Retakan-1/train/images
+val: /Users/pragunisanotra/Desktop/Prediction_Model/building_health/Dummy-Retakan-1/valid/images
+test: /Users/pragunisanotra/Desktop/Prediction_Model/building_health/Dummy-Retakan-1/test/images
+
+nc: 1
+names: ['Crack']
+
+roboflow:
+  workspace: buildinghealth
+  project: dummy-retakan-ijyvm
+  version: 1
+  license: Public Domain
+  url: https://universe.roboflow.com/buildinghealth/dummy-retakan-ijyvm/dataset/1

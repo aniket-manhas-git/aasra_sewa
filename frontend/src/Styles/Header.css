@@ -1,0 +1,185 @@
+/* Header styling */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffffcc; /* translucent white */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo and brand */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  height: 58px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.brand-name {
+  font-size: 1.65rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #1f2937;
+}
+
+/* Header buttons */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Host Button - modern version */
+.host-button {
+  padding: 0.6rem 1.6rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 9999px; /* pill shape */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  font-family: "Inter", sans-serif;
+}
+
+.host-button:hover {
+  background-color: #2563eb;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
+}
+
+.host-button:active {
+  background-color: #1d4ed8;
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
+}
+
+/* Icon buttons */
+.icon-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+.icon {
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+/* Dropdown styling */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.dropdown-list {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.dropdown-item {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.logout {
+  color: #ef4444;
+}
+
+.dropdown-item.user-info {
+  font-weight: bold;
+  color: #2563eb;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .host-button {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  .icon-button {
+    padding: 0.5rem;
+  }
+
+  .dropdown-menu {
+    right: -0.5rem;
+    width: 160px;
+  }
+
+  .header-buttons {
+    gap: 0.6rem;
+  }
+}

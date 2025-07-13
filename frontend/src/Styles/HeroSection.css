@@ -1,0 +1,96 @@
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  margin-top: 6rem; /* Equal to header height to prevent overlap */
+  height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Image wrapper behind everything */
+.hero-image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 1rem; /* Curved corners for image wrapper */
+}
+
+/* Full image with more transparency */
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6; /* Increased transparency */
+  border-radius: 1rem; /* Curved corners for the image */
+}
+
+/* Optional dark overlay to improve text contrast */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15); /* Slightly more contrast */
+  z-index: 1;
+  border-radius: 1rem; /* Match corner radius */
+}
+
+/* Text Content with container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styles */
+.hero-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.hero-heading .highlight {
+  color: #60A5FA; /* Light blue (new request) */
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #f3f4f6;
+  line-height: 1.6;
+}
+
+.hero-subtitle .hero-brand {
+  color: #60A5FA; /* Light blue (new request) */
+  font-weight: 600;
+}
+
+/* Responsive text sizes */
+@media (min-width: 640px) {
+  .hero-heading {
+    font-size: 4.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.75rem;
+  }
+}

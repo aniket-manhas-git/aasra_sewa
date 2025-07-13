@@ -1,0 +1,285 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+/* Container */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border: none;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 120px;
+}
+
+.login-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Headings */
+.login-card h2 {
+  font-size: 2.2rem;
+  color: #1f2937;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.login-card p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.login-input,
+.login-select {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid #d1d5db;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #111827;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+.login-input:focus,
+.login-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+  background-color: #fff;
+}
+
+/* Password Container */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 1.25rem;
+}
+
+/* Aadhaar Upload Section */
+.aadhaar-section {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.login-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Upload Area */
+.aadhaar-upload-area {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1.2rem;
+  border: 2px dashed #94a3b8;
+  border-radius: 1.5rem;
+  background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+  text-align: center;
+  color: #475569;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+}
+
+.aadhaar-upload-area:hover {
+  background: linear-gradient(to right, #dbeafe, #e0f2fe);
+  border-color: #3b82f6;
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.25);
+}
+
+.aadhaar-file-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.aadhaar-instruction {
+  pointer-events: none;
+  color: #64748b;
+}
+
+/* Aadhaar Image Preview */
+.aadhaar-preview-container {
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.aadhaar-preview-image {
+  margin-top: 1rem;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 1.25rem;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* ✅ Minimal Remove Button (Just an "X") */
+.signup-remove-aadhaar-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  color: #ef4444;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+  z-index: 2;
+}
+
+.signup-remove-aadhaar-btn:hover {
+  color: #b91c1c;
+  transform: scale(1.2);
+}
+
+.signup-remove-aadhaar-btn:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.signup-remove-aadhaar-btn-icon {
+  font-size: inherit;
+  line-height: 1;
+}
+
+/* Submit Button */
+.login-button {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.85rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .login-input,
+  .login-select,
+  .aadhaar-upload-area {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .login-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .login-card h2 {
+    font-size: 1.75rem;
+  }
+
+  .image-container {
+    height: 100px;
+  }
+}
+
+/* Error Message */
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #fcc;
+  text-align: center;
+}
+
+/* Disabled Fields */
+.login-button:disabled,
+.login-input:disabled,
+.login-select:disabled,
+.aadhaar-file-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}

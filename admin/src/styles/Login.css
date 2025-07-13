@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  color: #0f172a;
+}
+
+.admin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.admin-box {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  width: 100%;
+  max-width: 460px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.admin-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.1);
+}
+
+.admin-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.5px;
+}
+
+.admin-input .MuiOutlinedInput-root {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-input .MuiOutlinedInput-root:hover {
+  background-color: #f1f5f9;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.admin-button {
+  background-color: #6366f1 !important;
+  color: white !important;
+  padding: 12px 0;
+  font-weight: 600;
+  border-radius: 14px;
+  margin-top: 24px;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: #4f46e5 !important;
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+}
+
+.admin-error {
+  text-align: center;
+  margin-top: 12px;
+  color: #dc2626;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-box {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+
+  .admin-title {
+    font-size: 22px;
+  }
+
+  .admin-button {
+    font-size: 15px;
+  }
+}
+
+.admin-logo {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.admin-logo:hover {
+  transform: scale(1.05);
+}
