@@ -17,7 +17,7 @@ const HostDetails = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const res = await fetch(`${API_BASE_URL}/admin/property/${id}`, { credentials: 'include' });
+        const res = await fetch(`${API_BASE_URL}/v1/admin/property/${id}`, { credentials: 'include' });
         const data = await res.json();
         console.log('Property details:', data); // Debug log
         if (data && data.property) {
@@ -54,7 +54,7 @@ const HostDetails = () => {
       }
       console.log('HostDetails: Request body:', requestBody);
       
-              const res = await fetch(`${API_BASE_URL}/admin/property/${id}/status`, {
+              const res = await fetch(`${API_BASE_URL}/v1/admin/property/${id}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

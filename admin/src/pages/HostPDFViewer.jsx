@@ -15,7 +15,7 @@ const HostPDFViewer = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const res = await fetch(`${API_BASE_URL}/admin/property/${id}`, { credentials: 'include' });
+        const res = await fetch(`${API_BASE_URL}/v1/admin/property/${id}`, { credentials: 'include' });
         const data = await res.json();
         if (data && data.property) {
           setProperty(data.property);

@@ -97,7 +97,7 @@ const HostVerification = () => {
         requestBody.comment = ratingData.comment;
       }
 
-              const res = await fetch(`${API_BASE_URL}/admin/property/${id}/status`, {
+              const res = await fetch(`${API_BASE_URL}/v1/admin/property/${id}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ const HostVerification = () => {
     );
     if (confirmDelete) {
       try {
-        const res = await fetch(`${API_BASE_URL}/admin/property/${id}`, {
+        const res = await fetch(`${API_BASE_URL}/v1/admin/property/${id}`, {
           method: 'DELETE',
           credentials: 'include',
         });
