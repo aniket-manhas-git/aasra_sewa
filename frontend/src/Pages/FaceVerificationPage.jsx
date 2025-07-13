@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import FaceVerify from '../components/FaceVerify';
+import FaceVerify from '../Components/FaceVerify';
 import '../Styles/FaceVerificationPage.css'; // Import the CSS
 
 const FaceVerificationPage = () => {
