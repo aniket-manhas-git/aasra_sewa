@@ -10,7 +10,7 @@ const ActiveUser = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const url = `${API_BASE_URL}/v1/admin/users`;
+              const url = `${API_BASE_URL}/admin/users`;
       console.log('Fetching users from:', url);
       try {
         const res = await fetch(url, { credentials: 'include' });

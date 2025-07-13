@@ -29,9 +29,9 @@ const HostVerification = () => {
     const fetchHosts = async () => {
       setLoading(true);
       try {
-        const url = statusFilter === 'all' 
-          ? `${API_BASE_URL}/v1/admin/properties`
-          : `${API_BASE_URL}/v1/admin/properties?status=${statusFilter}`;
+                  const url = statusFilter === 'all' 
+            ? `${API_BASE_URL}/admin/properties`
+            : `${API_BASE_URL}/admin/properties?status=${statusFilter}`;
         
         const res = await fetch(url, { credentials: 'include' });
         const data = await res.json();
@@ -97,7 +97,7 @@ const HostVerification = () => {
         requestBody.comment = ratingData.comment;
       }
 
-      const res = await fetch(`${API_BASE_URL}/v1/admin/property/${id}/status`, {
+              const res = await fetch(`${API_BASE_URL}/admin/property/${id}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ const HostVerification = () => {
     );
     if (confirmDelete) {
       try {
-        const res = await fetch(`${API_BASE_URL}/v1/admin/property/${id}`, {
+        const res = await fetch(`${API_BASE_URL}/admin/property/${id}`, {
           method: 'DELETE',
           credentials: 'include',
         });

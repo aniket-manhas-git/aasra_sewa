@@ -10,7 +10,7 @@ const ActiveHosts = () => {
 
   useEffect(() => {
     const fetchHosts = async () => {
-      const url = `${API_BASE_URL}/v1/admin/hosts`;
+              const url = `${API_BASE_URL}/admin/hosts`;
       console.log('Fetching hosts from:', url);
       try {
         const res = await fetch(url, { credentials: 'include' });

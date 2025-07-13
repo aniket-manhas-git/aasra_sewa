@@ -11,7 +11,8 @@ const TopRatedShelters = () => {
       console.log('TopRatedShelters: Starting to fetch top rated properties');
       try {
         // First test if backend is accessible
-        const healthUrl = '/health';
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+        const healthUrl = `${API_URL}/health`;
         console.log('TopRatedShelters: Testing backend health at:', healthUrl);
 
         try {
@@ -25,7 +26,7 @@ const TopRatedShelters = () => {
           console.error('TopRatedShelters: Backend health check failed:', healthError);
         }
 
-        const url = '/api/v1/property/top-rated';
+        const url = `${API_URL}/api/v1/property/top-rated`;
         console.log('TopRatedShelters: API URL:', url);
 
         const res = await fetch(url, {

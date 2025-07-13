@@ -34,7 +34,7 @@ const AdminLogin = ({ onLogin }) => {
     e.preventDefault();
     setError('');
     try {
-      const res = await fetch(`${API_BASE_URL}/v1/admin/login`, {
+      const res = await fetch(`${API_BASE_URL}/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
