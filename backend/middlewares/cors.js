@@ -4,6 +4,8 @@ import cors from "cors";
 const allowedOrigins = [
   "http://localhost:5173", // Vite frontend development server
   "http://localhost:5174", // Admin frontend development server
+  "https://aasrasewa-frontend.onrender.com", // Production frontend
+  "https://aasrasewa-admin.onrender.com", // Production admin panel
   process.env.FRONTEND_URL?.trim(), // Production frontend URL from .env
 ].filter(Boolean); // Remove undefined or empty values
 

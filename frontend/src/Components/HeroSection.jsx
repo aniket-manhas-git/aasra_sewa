@@ -4,7 +4,7 @@ import "./../Styles/HeroSection.css";
 
 import earth from "../assets/earth.jpg";
 import fire from "../assets/fire.jpg";
-import flood from "../assets/flood.jpg";
+import flood from "../assets/Flood.jpg";
 import flood1 from "../assets/flood1.jpg";
 import people from "../assets/people.jpg";
 
